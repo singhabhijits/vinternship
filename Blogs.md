@@ -51,20 +51,34 @@ Your blog file must include front matter at the beginning with the following fie
 ---
 title: "Your Blog Title Here"
 author: Your Full Name
-nptel_id: YOUR_NPTEL_ID
+pinternship_id: YOUR_PINTERNSHIP_ID
 ---
 ```
-*Note: If your title contains special characters like colons (:), wrap it in double quotes.*
+
+Your blog must end with the following structure:
+```markdown
+---
+
+Author: [Your Full Name](https://www.linkedin.com/in/your-linkedin-profile/)  
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/your-article-link/)
+```
+
+*Note: If your blog title contains special characters like colons (:), wrap it in double quotes.*
 
 *Example:*
 ```markdown
 ---
 title: "My Learning Journey: Reflections on Growth"
 author: Mohit Kumar
-nptel_id: NPTEL12345
+pinternship_id: PID12345
 ---
 
-Your blog content starts here...
+Your blog content here...
+
+---
+
+Author: [Mohit Kumar](https://www.linkedin.com/in/mohit-kumar/)  
+LinkedIn Article: [Read on LinkedIn](https://www.linkedin.com/my-learning-journey-reflections-growth-mohit-kumar/)
 ```
 
 <br>
@@ -98,7 +112,7 @@ Your blog content starts here...
 <div style="margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <details style="margin: 0;">
     <summary style="cursor: pointer; font-size: 1.2rem; font-weight: 600; padding: 1rem 1.5rem; background: linear-gradient(135deg, #3B82F620 0%, #3B82F640 100%); border-left: 4px solid #3B82F6; display: flex; align-items: center; gap: 0.5rem;">
-      <span>{{ blog.title }} - {{ blog.author }} ({{ blog.nptel_id }})</span>
+      <span>{{ blog.title }} - {{ blog.author }} ({{ blog.pinternship_id }})</span>
     </summary>
     
     <div style="padding: 1.5rem; background-color: white;">
