@@ -39,8 +39,10 @@ Choose your cohort to view general information, live dashboard, announcements, a
       <div style="color: #586069; font-size: 0.95rem;">
         {% if cohort.end_date != "" and cohort.end_date %}
           📅 Started: {{ cohort.start_date }} | Ended: {{ cohort.end_date }}
-        {% else %}
+        {% elsif cohort.status == "Active" or cohort.status == "Completed" %}
           📅 Started: {{ cohort.start_date }}
+        {% else %}
+          📅 Starting: {{ cohort.start_date }}
         {% endif %}
       </div>
       <div style="color: #586069; font-size: 0.9rem; margin-top: 0.5rem; font-style: italic;">
